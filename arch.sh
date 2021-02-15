@@ -26,7 +26,7 @@ do
 	3)
 		sudo pacman -S gparted virtualbox engrampa lxtask gnome-screenshot pantheon-calculator
 		sudo pacman -S pacaur 
-        sudo pacaur -S virtualbox-ext-oracle
+		sudo pacaur -S virtualbox-ext-oracle
 		sudo pacaur -S manjaro-zsh-config && cp .zshrc ~/
 		continue
 		;;
@@ -35,10 +35,10 @@ do
 		sudo pacman -S  transmission-gtk vivaldi
 		continue
 		;;
-    5)
+	5)
 		flatpak install flathub org.onlyoffice.desktopeditors
 		continue
-        ;;
+		;;
 	*)
 		echo "Sorry, I don't understand"
 		break
