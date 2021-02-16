@@ -1,13 +1,13 @@
 #!/bin/sh
-echo "Someone app need a AUR repository!" 
+echo "Someone app need a flutpak repository!" 
 
 echo "List of install app: "
 echo "
 1.Audio & Video complect (Audacious,celluloid, gthumb)
 2.Internet complect (transmission-gtk, vivaldi)
-3.Utilit complect (Gparted, VirtualBox, engrampa, lxtask, gnome-screenshot, manjaro-zsh-config, pantheon-calculator, popsicle) 
+3.Utilit complect (Gparted, VirtualBox, engrampa, lxtask, gnome-screenshot, pantheon-calculator, popsicle) 
 4.Video/Audo Edit complect (Kdenlive,audacity)
-5.Document edit complect (onlyoffice, evince, foliate, visual-studio-code-bin)
+5.Document edit complect (onlyoffice, evince, foliate, VScode)
 6.Exit
 "
 
@@ -29,9 +29,7 @@ do
 		;;
 
 	3)
-		sudo apt install pacaur gparted virtualbox engrampa lxtask gnome-screenshot pantheon-calculator popsicle 
-		pacaur -S virtualbox-ext-oracle
-		sudo apt install manjaro-zsh-config && cp .zshrc ~/
+		sudo apt install gparted virtualbox engrampa lxtask gnome-screenshot pantheon-calculator popsicle 
 		echo " " 
 		echo "Select other item on list :"
 		continue
@@ -43,7 +41,7 @@ do
 		;;
 	5)
 		sudo apt install evince foliate
-		pacaur -S visual-studio-code-bin
+		flatpak uninstall flathub com.visualstudio.code
 		flatpak install flathub org.onlyoffice.desktopeditors
 		echo " " 
 		echo "Select other item on list :"
