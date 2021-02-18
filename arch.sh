@@ -16,33 +16,33 @@ do
   read INPUT_STRING
   case $INPUT_STRING in
 	1)
-		sudo apt install audacious celluloid gthumb 
+		sudo pacman -S audacious celluloid gthumb 
 		echo " " 
 		echo "Select other item on list :"
 		continue
 		;;
 	2)
-		sudo apt install  transmission-gtk vivaldi
+		sudo pacman -S  transmission-gtk vivaldi
 		echo " " 
 		echo "Select other item on list :"
 		continue
 		;;
 
 	3)
-		sudo apt install pacaur gparted virtualbox engrampa lxtask gnome-screenshot pantheon-calculator popsicle 
+		sudo pacman -S pacaur gparted virtualbox engrampa lxtask gnome-screenshot pantheon-calculator popsicle 
 		pacaur -S virtualbox-ext-oracle
-		sudo apt install manjaro-zsh-config && cp .zshrc ~/
+		sudo pacman -S manjaro-zsh-config && cp .zshrc ~/
 		echo " " 
 		echo "Select other item on list :"
 		continue
 		;;
 
 	4)
-		sudo apt install kdenlive audacity
+		sudo pacman -S kdenlive audacity
 		continue
 		;;
 	5)
-		sudo apt install evince foliate
+		sudo pacman -S evince foliate
 		pacaur -S visual-studio-code-bin
 		flatpak install flathub org.onlyoffice.desktopeditors
 		echo " " 
