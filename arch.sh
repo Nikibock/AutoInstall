@@ -5,7 +5,7 @@ echo "
 2.Internet complect (transmission-gtk, vivaldi)
 3.Document edit complect (onlyoffice, evince, foliate, visual-studio-code-bin)
 4.Video/Audo Edit complect (Kdenlive,audacity)
-5.Utilit complect (Gparted, VirtualBox, engrampa, lxtask, gnome-screenshot, pantheon-calculator, popsicle)
+5.Utilit complect (Gparted, VirtualBox, engrampa, gnome-screenshot, pantheon-calculator, popsicle)
 6.ZSH shell (manjaro-zsh-config)
 7+.Exit
 "
@@ -29,7 +29,7 @@ do
 
 	3)
         sudo pacman -S evince foliate
-		flatpak install flathub com.visualstudio.code
+		pacaur -S visual-studio-code-bin
 		flatpak install flathub org.onlyoffice.desktopeditors
 		echo " " 
 		echo "Select other item on list :"
@@ -43,7 +43,7 @@ do
 		continue
 		;;
 	5)
-		sudo pacman -S gparted virtualbox engrampa lxtask gnome-screenshot pantheon-calculator popsicle 
+		sudo pacman -S gparted virtualbox engrampa gnome-screenshot pantheon-calculator popsicle 
 		pacaur -S virtualbox-ext-oracle
 		echo " " 
 		echo "Select other item on list :"
