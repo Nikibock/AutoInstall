@@ -1,4 +1,11 @@
 #!/bin/sh
+update_system(){
+	echo "Обновляю сабжы"
+	sudo apt update -y 
+	sudo apt upgrade -y
+}
+
+setup_menu(){
 echo "List of install app: "
 echo "
 1.Audio & Video complect (Audacious,celluloid, gthumb)
@@ -6,8 +13,12 @@ echo "
 3.Document edit complect (onlyoffice, evince, foliate, visual-studio-code-bin)
 4.Video/Audo Edit complect (Kdenlive,audacity)
 5.Utilit complect (Gparted, VirtualBox, engrampa, htop, gnome-screenshot, pantheon-calculator, popsicle)
-6+.Exit
+Input word 'exit' for Exit 
 "
+}
+
+update_system
+setup_menu
 
 while :
 do
@@ -17,12 +28,14 @@ do
 		sudo apt install audacious celluloid gthumb 
 		echo " " 
 		echo "Select other item on list :"
+		setup_menu
 		continue
 		;;
 	2)
 		sudo apt install transmission-gtk vivaldi
 		echo " " 
 		echo "Select other item on list :"
+		setup_menu
 		continue
 		;;
 
@@ -58,17 +71,24 @@ do
 		sudo apt install kdenlive audacity
 		echo " " 
 		echo "Select other item on list :"
+		setup_menu
 		continue
 		;;
 	5)
 		sudo apt install gparted virtualbox virtualbox-ext-pack engrampa htop gnome-screenshot popsicle 
 		echo " " 
 		echo "Select other item on list :"
+		setup_menu
 		continue
 		;;
-    *)
+    "exit")
 		echo "You are select EXIT"
 		break
+		;;
+    *)
+		echo "Input is incorrect"
+		setup_menu
+		continue
 		;;
   esac
 done
